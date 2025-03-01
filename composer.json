@@ -1,0 +1,23 @@
+{
+    "name": "robodocxs/robodocxs-middleware-dtos",
+    "description": "A package to provide the DTOs for Robodocxs middlewares",
+    "type": "library",
+    "require": {
+        "php": "^8.1",
+        "spatie/laravel-data": "^3.0"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Robodocxs\\RobodocxsMiddlewareDtos\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Robodocxs",
+            "email": "integrations@robodocxs.ai"
+        }
+    ],
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
