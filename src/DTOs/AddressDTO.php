@@ -11,6 +11,9 @@ class AddressDTO extends Data
     public function __construct(
         public string|null $id = null,
         public string|null $name = null,
+        public string|null $contact_name = null,
+        public string|null $email = null,
+        public string|null $phone = null,
         public string|null $description = null,
         public string|null $street = null,
         public string|null $house_number = null,

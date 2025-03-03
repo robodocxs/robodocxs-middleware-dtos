@@ -19,8 +19,13 @@ class ErpDocumentDTO extends Data
         public Carbon|null          $created_at = null,
         public Carbon|null          $valid_until = null,
 
+        public AddressDTO|null      $delivery_address = null,
+
         #[DataCollectionOf(ErpDocumentItemDTO::class)]
         public DataCollection|null  $items = null,
+
+        #[DataCollectionOf(CustomDataDTO::class)]
+        public DataCollection|null  $customs = null,
     )
     {
 
