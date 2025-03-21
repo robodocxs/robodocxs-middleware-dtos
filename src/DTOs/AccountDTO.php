@@ -30,9 +30,9 @@ class AccountDTO extends Data
     {
     }
 
-    public static function fromArray(array $data): self
+    public static function fromArray(array $data): static
     {
-        return new self(
+        return new static(
             id: $data['id'] ?? null,
             id_2: $data['id_2'] ?? null,
             vat_id: $data['vat_id'] ?? null,

@@ -25,8 +25,8 @@ class ProductDTO extends Data
     {
     }
 
-    public static function fromArray(array $data): self
+    public static function fromArray(array $data): static
     {
-        return self::from($data);
+        return static::from($data);
     }
 }

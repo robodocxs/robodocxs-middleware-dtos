@@ -25,9 +25,9 @@ class AddressDTO extends Data
     {
     }
 
-    public static function fromArray(array $data): self
+    public static function fromArray(array $data): static
     {
-        return new self(
+        return new static(
             id: $data['id'] ?? null,
             name: $data['name'] ?? null,
             description: $data['description'] ?? null,

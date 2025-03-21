@@ -16,9 +16,9 @@ class ContactDTO extends Data
         public string|null $phone = null,
     ) {}
 
-    public static function fromArray(array $data): self
+    public static function fromArray(array $data): static
     {
-        return new self(
+        return new static(
             id: $data['id'] ?? null,
             first_name: $data['first_name'] ?? null,
             last_name: $data['last_name'] ?? null,
