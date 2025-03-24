@@ -8,9 +8,9 @@ class RegionalMappingDTO extends Data
 {
     public function __construct(
         public string|null $country_code = null,
-        public float|null  $zip = null,
-        public float|null  $zip_from = null,
-        public float|null  $zip_to = null,
+        public string|int|null  $zip = null,
+        public string|int|null  $zip_from = null,
+        public string|int|null  $zip_to = null,
     )
     {
     }
