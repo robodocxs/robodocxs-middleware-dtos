@@ -25,7 +25,10 @@ class AccountDTO extends Data
         public DataCollection|null $delivery_addresses = null,
 
         #[DataCollectionOf(AddressDTO::class)]
-        public DataCollection|null $invoice_addresses = null
+        public DataCollection|null $invoice_addresses = null,
+
+        #[DataCollectionOf(CustomDataDTO::class)]
+        public DataCollection|null $customs = null,
     )
     {
     }
@@ -47,7 +50,10 @@ class AccountDTO extends Data
                 : null,
             invoice_addresses: isset($data['invoice_addresses'])
                 ? AddressDTO::collection($data['invoice_addresses'])
-                : null
+                : null,
+            customs: isset($data['customs'])
+                ? CustomDataDTO::collection($data['customs'])
+                : null,
         );
     }
 }
