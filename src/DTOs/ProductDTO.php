@@ -2,6 +2,7 @@
 
 namespace Robodocxs\RobodocxsMiddlewareDtos\DTOs;
 
+use Robodocxs\RobodocxsMiddlewareDtos\Enums\ProductType;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Data;
 use Spatie\LaravelData\DataCollection;
@@ -18,9 +19,14 @@ class ProductDTO extends Data
         public string|null         $ean = null,
         public float|null          $unit_price = null,
         public float|null          $weight = null,
+        public string|null         $color = null,
+        public ProductType|null    $product_type = null,
 
         #[DataCollectionOf(UnitConversionDTO::class)]
         public DataCollection|null $unit_conversions = null,
+
+        #[DataCollectionOf(ProductReferenceDTO::class)]
+        public DataCollection|null $product_references = null,
     )
     {
     }
