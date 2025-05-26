@@ -4,6 +4,6 @@ namespace Robodocxs\RobodocxsMiddlewareDtos\Enums;
 
 enum ProductType: string
 {
-    case MAIN_PRODUCT = 'main_product';
+    case PRODUCT = 'product';
     case ACCESSORY = 'accessory';
 }
