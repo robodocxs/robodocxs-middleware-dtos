@@ -19,6 +19,8 @@ class AccountDTO extends Data
         public string|null         $description = null,
         public string|null         $contact = null,
         public string|null         $email = null,
+        public string|null         $segment = null,
+        public string|null         $segment_2 = null,
         public AddressDTO|null     $address = null,
 
         #[DataCollectionOf(AddressDTO::class)]
