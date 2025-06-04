@@ -14,6 +14,8 @@ class ProductDTO extends Data
         public string|null         $product_code = null,
         public string|null         $product_code_2 = null,
         public string|null         $name = null,
+        public string|null         $display_name = null,
+        public string|null         $search = null,
         public string|null         $description = null,
         public string|int|null     $base_unit_id = null,
         public string|null         $ean = null,
