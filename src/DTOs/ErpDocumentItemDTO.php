@@ -8,10 +8,11 @@ use Spatie\LaravelData\Data;
 class ErpDocumentItemDTO extends Data
 {
     public function __construct(
-        public string|null $id = null,
-        public string|null $line_item_number = null,
-        public string|null $name = null,
-        public float|null $quantity = null,
+        public string|null     $id = null,
+        public string|null     $line_item_number = null,
+        public string|null     $name = null,
+        public float|null      $quantity = null,
+        public ProductDTO|null $product = null,
     )
     {
     }
