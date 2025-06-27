@@ -34,28 +34,4 @@ class AccountDTO extends Data
     )
     {
     }
-
-    public static function fromArray(array $data): static
-    {
-        return new static(
-            id: $data['id'] ?? null,
-            id_2: $data['id_2'] ?? null,
-            vat_id: $data['vat_id'] ?? null,
-            ean: $data['ean'] ?? null,
-            name: $data['name'] ?? null,
-            description: $data['description'] ?? null,
-            contact: $data['contact'] ?? null,
-            email: $data['email'] ?? null,
-            address: isset($data['address']) ? AddressDTO::from($data['address']) : null,
-            delivery_addresses: isset($data['delivery_addresses'])
-                ? AddressDTO::collection($data['delivery_addresses'])
-                : null,
-            invoice_addresses: isset($data['invoice_addresses'])
-                ? AddressDTO::collection($data['invoice_addresses'])
-                : null,
-            customs: isset($data['customs'])
-                ? CustomDataDTO::collection($data['customs'])
-                : null,
-        );
-    }
 }

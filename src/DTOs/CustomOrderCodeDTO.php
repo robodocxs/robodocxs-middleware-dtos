@@ -14,12 +14,4 @@ class CustomOrderCodeDTO extends Data
     )
     {
     }
-
-    public static function fromArray(array $data): static
-    {
-        return new static(
-            product_code: $data['product_code'] ?? null,
-            custom_product_code: $data['custom_product_code'] ?? null
-        );
-    }
 }

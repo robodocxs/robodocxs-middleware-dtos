@@ -24,19 +24,4 @@ class AddressDTO extends Data
     )
     {
     }
-
-    public static function fromArray(array $data): static
-    {
-        return new static(
-            id: $data['id'] ?? null,
-            name: $data['name'] ?? null,
-            description: $data['description'] ?? null,
-            street: $data['street'] ?? null,
-            house_number: $data['house_number'] ?? null,
-            zip: $data['zip'] ?? null,
-            city: $data['city'] ?? null,
-            country_code: $data['country_code'] ?? null,
-            type: $data['type'] ?? null
-        );
-    }
 }

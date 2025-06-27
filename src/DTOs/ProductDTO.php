@@ -32,9 +32,4 @@ class ProductDTO extends Data
     )
     {
     }
-
-    public static function fromArray(array $data): static
-    {
-        return static::from($data);
-    }
 }
