@@ -28,6 +28,31 @@ class ErpDocumentDTO extends Data
         public DataCollection|null  $customs = null,
     )
     {
+    }
 
+    public function addCustom($key, $value): self
+    {
+        if ($this->customs === null) {
+            $this->customs = new DataCollection(CustomDataDTO::class, []);
+        }
+
+        $this->customs[] = new CustomDataDTO($key, $value);
+
+        return $this;
+    }
+
+    public function getCustom(string $key): string|array|null
+    {
+        if ($this->customs === null || $this->customs->count() === 0) {
+            return null;
+        }
+
+        foreach ($this->customs as $custom) {
+            if ($custom->key === $key) {
+                return $custom->value;
+            }
+        }
+
+        return null;
     }
 }

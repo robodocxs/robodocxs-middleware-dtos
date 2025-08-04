@@ -3,6 +3,7 @@
 namespace Robodocxs\RobodocxsMiddlewareDtos\DTOs;
 
 use Spatie\LaravelData\Data;
+use Spatie\LaravelData\DataCollection;
 
 class CustomDataDTO extends Data
 {
@@ -12,4 +13,5 @@ class CustomDataDTO extends Data
     )
     {
     }
+
 }
