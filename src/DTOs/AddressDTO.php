@@ -18,6 +18,7 @@ class AddressDTO extends Data
         public string|null $street = null,
         public string|null $house_number = null,
         public string|null $zip = null,
+        public string|null $zip_code_2 = null,
         public string|null $city = null,
         public string|null $country_code = null,
         public string|null $type = null,
