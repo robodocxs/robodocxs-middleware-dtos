@@ -83,4 +83,25 @@ class ErpDocumentItemDTOTest extends TestCase
         $this->assertEquals('getCustom', $reflection->getName());
         $this->assertEquals('array|string|null', (string) $reflection->getReturnType());
     }
+    
+    public function test_price_quantifier_property_can_be_set_and_retrieved()
+    {
+        $dto = new ErpDocumentItemDTO(price_quantifier: 'per_unit');
+        
+        $this->assertEquals('per_unit', $dto->price_quantifier);
+    }
+    
+    public function test_price_quantifier_property_defaults_to_null()
+    {
+        $dto = new ErpDocumentItemDTO();
+        
+        $this->assertNull($dto->price_quantifier);
+    }
+    
+    public function test_price_quantifier_property_accepts_null_value()
+    {
+        $dto = new ErpDocumentItemDTO(price_quantifier: null);
+        
+        $this->assertNull($dto->price_quantifier);
+    }
 }
