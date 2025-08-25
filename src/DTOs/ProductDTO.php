@@ -29,6 +29,9 @@ class ProductDTO extends Data
 
         #[DataCollectionOf(ProductReferenceDTO::class)]
         public DataCollection|null $product_references = null,
+
+        #[DataCollectionOf(LocalizedStringDTO::class)]
+        public DataCollection|null $localized_display_names = null,
     )
     {
     }
