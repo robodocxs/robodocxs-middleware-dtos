@@ -10,29 +10,27 @@ use Spatie\LaravelData\DataCollection;
 class ProductDTO extends Data
 {
     public function __construct(
-        public string|null         $id = null,
-        public string|null         $product_code = null,
-        public string|null         $product_code_2 = null,
-        public string|null         $name = null,
-        public string|null         $display_name = null,
-        public string|null         $search = null,
-        public string|null         $description = null,
-        public string|int|null     $base_unit_id = null,
-        public string|null         $ean = null,
-        public float|null          $unit_price = null,
-        public float|null          $weight = null,
-        public string|null         $color = null,
-        public ProductType|null    $product_type = null,
+        public ?string $id = null,
+        public ?string $product_code = null,
+        public ?string $product_code_2 = null,
+        public ?string $name = null,
+        public ?string $display_name = null,
+        public ?string $search = null,
+        public ?string $description = null,
+        public string|int|null $base_unit_id = null,
+        public ?string $ean = null,
+        public ?float $unit_price = null,
+        public ?float $weight = null,
+        public ?string $color = null,
+        public ?ProductType $product_type = null,
 
         #[DataCollectionOf(UnitConversionDTO::class)]
-        public DataCollection|null $unit_conversions = null,
+        public ?DataCollection $unit_conversions = null,
 
         #[DataCollectionOf(ProductReferenceDTO::class)]
-        public DataCollection|null $product_references = null,
+        public ?DataCollection $product_references = null,
 
         #[DataCollectionOf(LocalizedStringDTO::class)]
-        public DataCollection|null $localized_display_names = null,
-    )
-    {
-    }
+        public ?DataCollection $localized_display_names = null,
+    ) {}
 }

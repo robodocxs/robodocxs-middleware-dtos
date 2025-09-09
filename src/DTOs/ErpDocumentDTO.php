@@ -11,24 +11,22 @@ use Spatie\LaravelData\DataCollection;
 class ErpDocumentDTO extends Data
 {
     public function __construct(
-        public string|null          $id = null,
-        public ErpDocumentType|null $erp_document_type = null,
-        public string|null          $blanket_order_erp_id = null,
-        public string|null          $quote_erp_id = null,
-        public float|null           $total_value = null,
-        public Carbon|null          $created_at = null,
-        public Carbon|null          $valid_until = null,
+        public ?string $id = null,
+        public ?ErpDocumentType $erp_document_type = null,
+        public ?string $blanket_order_erp_id = null,
+        public ?string $quote_erp_id = null,
+        public ?float $total_value = null,
+        public ?Carbon $created_at = null,
+        public ?Carbon $valid_until = null,
 
-        public AddressDTO|null      $delivery_address = null,
+        public ?AddressDTO $delivery_address = null,
 
         #[DataCollectionOf(ErpDocumentItemDTO::class)]
-        public DataCollection|null  $items = null,
+        public ?DataCollection $items = null,
 
         #[DataCollectionOf(CustomDataDTO::class)]
-        public DataCollection|null  $customs = null,
-    )
-    {
-    }
+        public ?DataCollection $customs = null,
+    ) {}
 
     public function addCustom($key, $value): self
     {

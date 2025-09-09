@@ -9,12 +9,10 @@ use Spatie\LaravelData\DataCollection;
 class TeamDTO extends Data
 {
     public function __construct(
-        public string|null         $id = null,
-        public string|null         $name = null,
+        public ?string $id = null,
+        public ?string $name = null,
 
         #[DataCollectionOf(RegionalMappingDTO::class)]
-        public DataCollection|null $regional_mappings = null,
-    )
-    {
-    }
+        public ?DataCollection $regional_mappings = null,
+    ) {}
 }

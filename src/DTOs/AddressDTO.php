@@ -3,25 +3,21 @@
 namespace Robodocxs\RobodocxsMiddlewareDtos\DTOs;
 
 use Spatie\LaravelData\Data;
-use Spatie\LaravelData\Attributes\Validation\Nullable;
-use Spatie\LaravelData\Attributes\Validation\StringType;
 
 class AddressDTO extends Data
 {
     public function __construct(
-        public string|null $id = null,
-        public string|null $name = null,
-        public string|null $contact_name = null,
-        public string|null $email = null,
-        public string|null $phone = null,
-        public string|null $description = null,
-        public string|null $street = null,
-        public string|null $house_number = null,
-        public string|null $zip = null,
-        public string|null $city = null,
-        public string|null $country_code = null,
-        public string|null $type = null,
-    )
-    {
-    }
+        public ?string $id = null,
+        public ?string $name = null,
+        public ?string $contact_name = null,
+        public ?string $email = null,
+        public ?string $phone = null,
+        public ?string $description = null,
+        public ?string $street = null,
+        public ?string $house_number = null,
+        public ?string $zip = null,
+        public ?string $city = null,
+        public ?string $country_code = null,
+        public ?string $type = null,
+    ) {}
 }
