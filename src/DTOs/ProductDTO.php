@@ -20,6 +20,7 @@ class ProductDTO extends Data
         public string|int|null $base_unit_id = null,
         public ?string $ean = null,
         public ?float $unit_price = null,
+        public float|int|null $price_quantifier = null,
         public ?float $weight = null,
         public ?string $color = null,
         public ?ProductType $product_type = null,
