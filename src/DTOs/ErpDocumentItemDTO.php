@@ -14,6 +14,7 @@ class ErpDocumentItemDTO extends Data
         public ?string $line_item_number = null,
         public ?string $name = null,
         public ?float $quantity = null,
+        public ?float $total_price = null,
         public ?ProductDTO $product = null,
         public ?Carbon $valid_until = null,
         public ?Carbon $delivery_date = null,

@@ -17,7 +17,7 @@ class ProductDTO extends Data
         public ?string $display_name = null,
         public ?string $search = null,
         public ?string $description = null,
-        public string|int|null $base_unit_id = null,
+        public string|int|null $base_unit_id = null, // Todo: Rename to base_unit, because id is misleading
         public ?string $ean = null,
         public ?float $unit_price = null,
         public float|int|null $price_quantifier = null,
