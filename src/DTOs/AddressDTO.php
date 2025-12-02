@@ -13,6 +13,7 @@ class AddressDTO extends Data
         public ?string $email = null,
         public ?string $phone = null,
         public ?string $description = null,
+        public ?string $unloading_point = null,
         public ?string $street = null,
         public ?string $house_number = null,
         public ?string $zip = null,
