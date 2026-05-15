@@ -33,5 +33,7 @@ class ProductDTO extends Data
 
         #[DataCollectionOf(LocalizedStringDTO::class)]
         public ?DataCollection $localized_display_names = null,
+
+        public ?string $product_attributes = null,
     ) {}
 }
