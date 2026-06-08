@@ -2,6 +2,7 @@
 
 namespace Robodocxs\RobodocxsMiddlewareDtos\DTOs;
 
+use Robodocxs\RobodocxsMiddlewareDtos\Enums\ProductStatus;
 use Robodocxs\RobodocxsMiddlewareDtos\Enums\ProductType;
 use Spatie\LaravelData\Attributes\DataCollectionOf;
 use Spatie\LaravelData\Data;
@@ -35,5 +36,8 @@ class ProductDTO extends Data
         public ?DataCollection $localized_display_names = null,
 
         public ?string $product_attributes = null,
+
+        /** Sellability of the product in the source ERP; null = unclassified/unknown. */
+        public ?ProductStatus $status = null,
     ) {}
 }
